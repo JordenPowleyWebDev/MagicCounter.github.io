@@ -1,0 +1,135 @@
+/**
+ * ------------------------------------------------
+ * Color Scheme:
+ * Background		- #4ABDAC
+ * Button Color 	- #FC4A1A
+ * Text Color 		- #DFDCE3
+ * ------------------------------------------------
+ */
+
+/**
+ * Style Variables
+ */
+$backgroundColor: #4ABDAC;
+$titleColor: #DFDCE3;
+$buttonColor: #FC4A1A;
+
+/**
+ * Minimal Style Reset
+ */
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/**
+ * Basic Page Styling
+ */
+body{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	background: $backgroundColor;
+}
+
+#app{
+	width: 100%;
+	display: block;
+	position: relative;
+}
+
+.application_inner{
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: stretch;
+}
+
+.clearfix{
+	clear: both;
+}
+
+.button{
+	color: #fff;
+	font-family: inherit;
+	border: none;
+	border-radius: 50%;
+	background: $buttonColor;
+	-webkit-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.2);
+	-moz-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.2);
+	box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.2);
+	cursor: pointer;
+	transition: opacity 0.2s ease-in;
+	user-select: none;
+	outline: none;
+}
+
+.button:hover{
+	opacity: 0.8;
+}
+
+.button:active{
+	color: $buttonColor;
+	background: #fff;
+}
+
+/**
+ * Tile Styling
+ */
+.player_tile{
+	display: flex;
+	position: relative;
+	flex-grow: 1;
+	padding: 40px;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.title_container{
+	width: 100%;
+	display: block;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	position: relative;
+	text-align: center;
+}
+
+.title_container .player_title{
+	color: $titleColor;
+	font-size: 2rem;
+	user-select: none;
+	outline: none;
+}
+
+.title_container .player_title:focus{
+	outline: 1px solid white;
+}
+
+.life_container{
+	width: 100%;
+	display: block;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	color: $titleColor;
+	font-size: 3rem;
+	text-align: center;
+	user-select: none;
+}
+
+.player_controls{
+	width: 100%;
+	display: flex;
+	position: relative;
+	justify-content: center;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.player_controls .button{
+	width: 60px;
+	height: 60px;
+	margin: 10px;
+	font-size: 2rem;
+}
